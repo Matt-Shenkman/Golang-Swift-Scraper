@@ -83,10 +83,6 @@ func createGameDataTable() []GameData {
 
 	})
 
-	c.Visit("https://www.vegasinsider.com/college-basketball/odds/las-vegas/")
-	return gd
-}
-func main() {
-	gd := createGameDataTable()
-	fmt.Println(gd)
+	c.Visit("https://www.vegasinsider.com/nba/odds/las-vegas/")
+	return gd[:len(gd)-1]
 }

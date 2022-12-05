@@ -22,7 +22,7 @@ func main() {
 	defer writer.Flush()
 
 	c := colly.NewCollector()
-	c.OnHTML("table#customers", func(e *colly.HTMLElement) {
+	c.OnHTML("#customers", func(e *colly.HTMLElement) {
 		e.ForEach("tr", func(_ int, el *colly.HTMLElement) {
 			writer.Write([]string{
 				el.ChildText("td:nth-child(1)"),
