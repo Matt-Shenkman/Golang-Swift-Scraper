@@ -33,20 +33,25 @@ func main() {
 			ts := strings.Fields(teams)
 			i := 0
 			var bestOdds []string
-			var numbers []int
+			var links []string
 			game.ForEach(("div.d-flex.flex-column.odds-row.position-relative"), func(_ int, oddse *colly.HTMLElement) {
 				if i < 2 {
 					i += 1
 				} else {
-					j := 0
-					numbers = make([]int, 0)
-					oddse.ForEach(("div.d-flex.flex-row.pr-2.pr-lg-0.px-1"), func(_ int, siteOdds *colly.HTMLElement) {
-						numbers = append(numbers, j)
-						j += 1
+					bestOdds = make([]string, 0)
+					links = make([]string, 0)
+					oddse.ForEach(("div.d-flex.flex-row.pr-2.pr-lg-0.px-1"), func(_ int, overUnder *colly.HTMLElement) {
+						overUnder.ForEach("a.text-decoration-none", func(_ int, overUnder *colly.HTMLElement) {
+							temp := overUnder.ChildText("div.font-weight-bold.pt-3.regular-text.text-center")
+							temp2 := strings.Fields(temp)
+							if temp != "" {
+								bestOdds = append(bestOdds, strings.Join(temp2, " "))
+							}
+
+						})
+
 					})
-					temp := oddse.ChildText("div.best-odds-box.m-1.odds-box")
-					bestOdds = strings.Fields(temp)
-					fmt.Println(numbers)
+
 				}
 
 			})
