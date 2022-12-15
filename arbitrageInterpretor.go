@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"strconv"
+	"strings"
 )
 
 func min(a, b int) int {
@@ -89,5 +90,15 @@ func detectArbitrage(games []GameData) {
 }
 
 func main() {
-	detectArbitrage(createGameDataTable())
+	urls := [4]string{"https://www.vegasinsider.com/college-basketball/odds/las-vegas/", "https://www.vegasinsider.com/nfl/odds/las-vegas/", "https://www.vegasinsider.com/nba/odds/las-vegas/", "https://www.vegasinsider.com/college-football/odds/las-vegas/"}
+
+	for _, url := range urls {
+		leagueArr := strings.Split(url, "/")
+		fmt.Println("Scraping: " + leagueArr[3])
+		detectArbitrage(createGameDataTable(url))
+		fmt.Println("Finished Scraping " + leagueArr[3])
+		fmt.Println(" ")
+
+	}
+
 }

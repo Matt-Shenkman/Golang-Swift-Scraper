@@ -27,7 +27,7 @@ func stringToIntArr(a []string) []int {
 	}
 	return output
 }
-func createGameDataTable() []GameData {
+func createGameDataTable(url string) []GameData {
 	c := colly.NewCollector(colly.AllowedDomains())
 	c.OnRequest(func(r *colly.Request) {
 		fmt.Println("Visiting", r.URL)
@@ -83,6 +83,6 @@ func createGameDataTable() []GameData {
 
 	})
 
-	c.Visit("https://www.vegasinsider.com/nba/odds/las-vegas/")
+	c.Visit(url)
 	return gd[:len(gd)-1]
 }
