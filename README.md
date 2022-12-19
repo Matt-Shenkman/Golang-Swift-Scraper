@@ -12,8 +12,8 @@ To install this file download the repository and run: go run *.go
 There are no speacial utilziation needed to run the application. All outputs appear in the console and do not take in any dynamic inputs. 
 
 ## Contributions
-https://www.vegasinsider.com/college-basketball/odds/las-vegas/ This is the site where data is accessed
-github.com/gocolly/colly webscrasping package
+- https://www.vegasinsider.com/college-basketball/odds/las-vegas/ This is the site where data is accessed
+- github.com/gocolly/colly webscrasping package
 
 ## Relevant Files
 
