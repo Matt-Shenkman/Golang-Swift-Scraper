@@ -1,20 +1,20 @@
-package main
+// package main
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/gocolly/colly"
-)
+// 	"github.com/gocolly/colly"
+// )
 
-func main() {
-	c := colly.NewCollector(
-		colly.AllowedDomains("en.wikipedia.org"),
-	)
+// func main() {
+// 	c := colly.NewCollector(
+// 		colly.AllowedDomains("en.wikipedia.org"),
+// 	)
 
-	c.OnHTML(".mw-parser-output", func(e *colly.HTMLElement) {
-		links := e.ChildAttrs("a", "href")
-		fmt.Println(links)
-	})
-	c.Visit("https://en.wikipedia.org/wiki/Web_scraping")
+// 	c.OnHTML(".mw-parser-output", func(e *colly.HTMLElement) {
+// 		links := e.ChildAttrs("a", "href")
+// 		fmt.Println(links)
+// 	})
+// 	c.Visit("https://en.wikipedia.org/wiki/Web_scraping")
 
-}
+// }
