@@ -1,4 +1,4 @@
-module github.com/Matt-Shenkman/Sports-Bet_Arbitrage-Detector
+module github.com/matt-shenkman/sports-bet_arbitrage-detector
 
 go 1.19
 
