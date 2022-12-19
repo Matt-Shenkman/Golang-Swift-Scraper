@@ -9,3 +9,5 @@ The packages used include: colly, fmt, strings, math and strconv
 
 There are two relevant files in this project (the rest were just learning how to web scrap in in go colly) are arbitrageDetector and arbtriageInterpretor. All of the web scraping occures in arbitrageDetector. This file outputs an array of GameData structs that include the relevant information on the details of a game. Arbitrage Interpretor takes in this information and searches for arbaitrage opportinites. It will not output just any opportunity however. Some times the odds are listed incorrectly on Vegas Insider so if an odd is set two standard deviations above the mean of the rest of the odds we assume that this is incorrect and ignore this in our final calculation. Finally the interpetor looks at all games on all avaible leagues and outputs the games that contain what we are looking for if availible.
 
+
+MIT Liscence
