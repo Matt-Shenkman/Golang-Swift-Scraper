@@ -13,7 +13,7 @@ There are no speacial utilziation needed to run the application. All outputs app
 
 ## Contributions
 - https://www.vegasinsider.com/college-basketball/odds/las-vegas/ This is the site where data is accessed
-- github.com/gocolly/colly webscrasping package
+- github.com/gocolly/colly webscraping package
 
 ## Relevant Files
 
