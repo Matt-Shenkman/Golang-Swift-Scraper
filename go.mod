@@ -1,8 +1,9 @@
-module main
+module github.com/Matt-Shenkman/Sports-Bet_Arbitrage-Detector
 
 go 1.19
 
 require github.com/gocolly/colly v1.2.0
+
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.0 // indirect
